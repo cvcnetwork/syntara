@@ -106,7 +106,8 @@ class UserController extends BaseController
                 'username' => Input::get('username'),
                 'last_name' => (string)Input::get('last_name'),
                 'first_name' => (string)Input::get('first_name'),
-                'permissions' => $permissions
+                'permissions' => $permissions,
+                'timezone' => Input::get('timezone'),
             ));
 
             // activate user
