@@ -336,6 +336,7 @@ class UserController extends BaseController
             $user->last_name = Input::get('last_name');
             $user->first_name = Input::get('first_name');
             $user->permissions = $permissions;
+            $user->timezone = Input::get('timezone');
 
             $permissions = (empty($permissions)) ? '' : json_encode($permissions);
             // delete permissions in db
