@@ -33,6 +33,10 @@
                                     <label class="control-label">{{ trans('syntara::users.first-name') }}</label>
                                     <p><input class="col-lg-12 form-control" type="text" placeholder="{{ trans('syntara::users.first-name') }}" id="first_name" name="first_name"></p>
                                 </div>
+                                <div class="form-group">
+                                   <label class="control-label">Timezone</label>
+                                   <select class="col-lg-12 form-control" type="text" id="timezone" name="timezone" value="<?php echo getTzOptions(\Config::get('syntara::config.timezone'),'UTC'); ?>"></select>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                             @if($currentUser->hasAccess('user-group-management'))
